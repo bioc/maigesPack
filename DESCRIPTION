@@ -1,0 +1,32 @@
+Package: maigesPack
+Version: 1.0.3
+Title: Functions to handle cDNA microarray data, including several methods of
+	data analysis
+Author: Gustavo H. Esteves <gesteves@vision.ime.usp.br>, with contributions from
+	Roberto Hirata Jr <hirata@ime.usp.br>, E. Jordao Neves
+ 	<neves@ime.usp.br>, Elier B. Cristo <elier@ime.usp.br>, Ana C. Simoes
+	<anakqui@ime.usp.br> and Lucas Fahham <fahham@linux.ime.usp.br>	
+Maintainer: Gustavo H. Esteves <gesteves@vision.ime.usp.br>
+Depends: R (>= 2.0.0), convert, graph, limma, marray, methods, xtable
+Suggests: amap, annotate, class, e1071, MASS, multtest, OLIN, R2HTML, rgl, som
+Description: This package uses functions of various other packages together with
+	other functions  in a coordinated way to handle and analyse cDNA
+	microarray data
+License: GPL version 2 or newer
+LazyLoad: yes
+biocViews: Microarray, TwoChannel, Preprocessing, Statistics,
+	DifferentialExpression, Clustering, Classification, GraphsAndNetworks
+Collate: AllClasses.R AllGenerics.R print-methods.R summary-methods.R
+	show-methods.R dim-methods.R indexing-methods.R coerce-methods.R
+	plot-methods.R image-methods.R boxplot-methods.R calcA-methods.R
+	calcW-methods.R getLabels-methods.R activeMod.R activeModScoreHTML.R
+	activeNet.R activeNetScoreHTML.R addGeneGrps.R addPaths.R bootstrapCor.R
+	bootstrapMI.R bootstrapT.R classifyKNN.R classifyKNNsc.R classifyLDA.R
+	classifyLDAsc.R classifySVM.R classifySVMsc.R colors.R compCorr.R
+   	contrastsFitM.R createMaigesRaw.R createTDMS.R deGenes2by2BootT.R
+	deGenes2by2Ttest.R deGenes2by2Wilcox.R deGenesANOVA.R designANOVA.R
+	heatmapsM.R hierMde.R hierM.R kmeansMde.R kmeansM.R loadData.R MI.R
+	normLoc.R normOLIN.R normRepLoess.R normScaleLimma.R normScaleMarray.R
+	plotGenePair.R relNet2TGF.R relNetworkB.R relNetworkM.R robustCorr.R
+	selSpots.R somMde.R somM.R summarizeReplicates.R tableClass.R tablesDE.R
+URL: http://www.maiges.org/en/software/

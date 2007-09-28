@@ -1,0 +1,91 @@
+useDynLib(maigesPack)
+
+import(graphics, stats, graph)
+
+exportClasses(maigesPreRaw, maigesRaw, maiges, maigesANOVA, maigesDE,
+              maigesDEcluster, maigesClass, maigesRelNetM, maigesRelNetB,
+              maigesActMod, maigesActNet)
+
+exportMethods(coerce, show, "[")
+
+
+export(activeMod, activeModScoreHTML, activeNet, activeNetScoreHTML,
+       addGeneGrps, addPaths, bootstrapCor, bootstrapMI, bootstrapT, calcA,
+       calcW,  classifyKNN, classifyKNNsc, classifyLDA, classifyLDAsc,
+       classifySVM, classifySVMsc, compCorr, contrastsFitM, createMaigesRaw,
+       createTDMS, deGenes2by2BootT, deGenes2by2Ttest, deGenes2by2Wilcox,
+       deGenesANOVA, designANOVA, getLabels, heatmapsM, hierMde, hierM,
+       kmeansMde, kmeansM, loadData, MI, normLoc, normOLIN, normRepLoess,
+       normScaleLimma, normScaleMarray, plotGenePair, relNet2TGF, relNetworkB,
+       relNetworkM, robustCorr, selSpots, somMde, somM, summarizeReplicates,
+       tableClass, tablesDE)
+
+
+S3method(print, maigesPreRaw)
+S3method(print, maigesRaw)
+S3method(print, maiges)
+S3method(print, maigesANOVA)
+S3method(print, maigesDE)
+S3method(print, maigesDEcluster)
+S3method(print, maigesClass)
+S3method(print, maigesRelNetM)
+S3method(print, maigesRelNetB)
+S3method(print, maigesActMod)
+S3method(print, maigesActNet)
+
+S3method(boxplot, maigesRaw)
+S3method(boxplot, maiges)
+S3method(boxplot, maigesANOVA)
+S3method(boxplot, maigesDEcluster)
+
+S3method(calcA, default)
+S3method(calcA, maigesRaw)
+
+S3method(calcW, default)
+S3method(calcW, maigesRaw)
+
+S3method(dim, maigesPreRaw)
+S3method(dim, maigesRaw)
+S3method(dim, maiges)
+S3method(dim, maigesANOVA)
+
+S3method(getLabels, default)
+S3method(getLabels, maigesDE)
+S3method(getLabels, RGList)
+S3method(getLabels, MAList)
+S3method(getLabels, marrayRaw)
+S3method(getLabels, marrayNorm)
+
+S3method(image, maigesRaw)
+S3method(image, maiges)
+S3method(image, maigesANOVA)
+S3method(image, maigesRelNetM)
+S3method(image, maigesRelNetB)
+S3method(image, maigesActMod)
+S3method(image, maigesActNet)
+
+S3method(plot, maigesRaw)
+S3method(plot, maiges)
+S3method(plot, maigesANOVA)
+S3method(plot, maigesDE)
+S3method(plot, maigesDEcluster)
+S3method(plot, maigesClass)
+S3method(plot, maigesRelNetM)
+S3method(plot, maigesRelNetB)
+S3method(plot, maigesActMod)
+S3method(plot, maigesActNet)
+
+S3method(relNet2TGF, maigesRelNetB)
+S3method(relNet2TGF, maigesRelNetM)
+
+S3method(summary, maigesPreRaw)
+S3method(summary, maigesRaw)
+S3method(summary, maiges)
+S3method(summary, maigesANOVA)
+S3method(summary, maigesDE)
+S3method(summary, maigesDEcluster)
+S3method(summary, maigesClass)
+S3method(summary, maigesRelNetM)
+S3method(summary, maigesRelNetB)
+S3method(summary, maigesActMod)
+S3method(summary, maigesActNet)
