@@ -121,12 +121,8 @@ plot(gastro.raw[,1], bkgSub="none")
 plot(gastro.raw[,1], bkgSub="subtract")
 plot(gastro.raw[,1], bkgSub="normexp")
 
-## Example with an object of class maigesNorm, without and with backgound
-## subtraction, also we present a plot with normexp (from limma package)
-## subtract algorithm.
-plot(gastro.norm[,1], bkgSub="none")
-plot(gastro.norm[,1], bkgSub="subtract")
-plot(gastro.summ[,1], bkgSub="normexp")
+## Example with an object of class maigesNorm.
+plot(gastro.norm[,1])
 
 
 

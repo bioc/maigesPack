@@ -26,7 +26,6 @@
 ## Adapted from Elier Cristo's functions
 ## 27/05/07
 ##
-## Version: 1.1
 ##
 
 
@@ -160,10 +159,11 @@ nGenes=3, cliques=100, sortBy="cv") {
     }
     
     
-    ## Removing samples that wer not used
+    ## Removing samples that were not used
     idx <- !is.na(colnames(table))
     table <- table[, idx]
-    
+    idxGrp1 <- idxGrp1[idx]
+    idxGrp2 <- idxGrp2[idx]
     
     ## Doing the SC method search for classifiers
     tmpP <- apply(table, 1, Test, idxGrp1, idxGrp2, func)

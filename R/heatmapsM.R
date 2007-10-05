@@ -16,7 +16,6 @@
 ## (adapted from Elier B. Cristo)
 ## Data: 15/05/07
 ##
-## Version: 1.0
 ##
 
 

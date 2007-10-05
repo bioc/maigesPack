@@ -20,7 +20,6 @@
 ## Adapted from Elier Cristo's functions
 ## 27/05/07
 ##
-## Version: 1.1
 ##
 
 
@@ -49,11 +48,10 @@ gNameID="GeneName", geneGrp=1, path=NULL, nGenes=3) {
         for (i in 1:nrow(idxAnt)) {
             g <- idxAnt[i, ]
             for (j in (1:ng)[-g]) {
-                
                 ## Doing first calculation
                 if(i == 1 & j == (1:ng)[-g][1]) {
                     resCV <- c(resCV,
-                    sum(e1071::svm(as.data.frame(t(table))[, c(g, j)],
+                    sum(e1071::svm(as.data.frame(t(unname(tab)))[, c(g, j)],
                     samp, cross=1)$fitted == samp))
                     
                     indexes <- rbind(indexes, c(g, j))
@@ -67,14 +65,14 @@ gNameID="GeneName", geneGrp=1, path=NULL, nGenes=3) {
                 
                 if(test == 0) {
                     resCV <- c(resCV,
-                    sum(e1071::svm(as.data.frame(t(table))[, c(g, j)],
+                    sum(e1071::svm(as.data.frame(t(unname(tab)))[, c(g, j)],
                     samp, cross=1)$fitted == samp))
                     
                     indexes <- rbind(indexes, c(g, j))
                 }
             }
         }
-        
+
         idxGood <- sort(resCV, decreasing=TRUE, index.return=TRUE)$ix
         
         return(list(CV=resCV[idxGood], SVD=resSVD[idxGood],
@@ -128,7 +126,7 @@ gNameID="GeneName", geneGrp=1, path=NULL, nGenes=3) {
     ## Removing samples that wer not used
     idx <- !is.na(colnames(table))
     table <- table[, idx]
-    
+
     
     ## Doing the exaustive search for classifiers
     tmp <- matrix(1:nrow(table), nrow(table), 1)
@@ -136,6 +134,7 @@ gNameID="GeneName", geneGrp=1, path=NULL, nGenes=3) {
         classCliques <- oneMoreIter(table, tmp)
         tmp <- classCliques$cliques
     }
+    
     
     geneCliques <- NULL
     for(i in 1:dim(classCliques$cliques)[1])

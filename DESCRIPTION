@@ -1,5 +1,5 @@
 Package: maigesPack
-Version: 1.3.0
+Version: 1.3.1
 Title: Functions to handle cDNA microarray data, including several methods of
 	data analysis
 Author: Gustavo H. Esteves <gesteves@vision.ime.usp.br>, with contributions from
@@ -7,7 +7,7 @@ Author: Gustavo H. Esteves <gesteves@vision.ime.usp.br>, with contributions from
  	<neves@ime.usp.br>, Elier B. Cristo <elier@ime.usp.br>, Ana C. Simoes
 	<anakqui@ime.usp.br> and Lucas Fahham <fahham@linux.ime.usp.br>	
 Maintainer: Gustavo H. Esteves <gesteves@vision.ime.usp.br>
-Depends: R (>= 2.0.0), convert, graph, limma, marray, methods, xtable
+Depends: R (>= 2.0.0), convert, graph, limma, marray, methods
 Suggests: amap, annotate, class, e1071, MASS, multtest, OLIN, R2HTML, rgl, som
 Description: This package uses functions of various other packages together with
 	other functions  in a coordinated way to handle and analyse cDNA

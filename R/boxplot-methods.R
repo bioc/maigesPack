@@ -113,7 +113,7 @@ gSamples=NULL, ...) {
 
 
         toPlot <- list()
-        for (i in unique(samples))
+        for (i in unique(gSamples))
             toPlot[[i]] <- calcW(x[genes == name, samples == i])
 
 

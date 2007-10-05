@@ -3,7 +3,6 @@
 ## Gustavo H. Esteves
 ## 11/05/07
 ##
-## Version: 1.0
 ##
 
 

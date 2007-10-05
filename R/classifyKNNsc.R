@@ -23,9 +23,8 @@
 ##
 ## Gustavo Esteves
 ## Adapted from Elier Cristo's functions
-## 27/05/07
+## 05/10/07
 ##
-## Version: 1.1
 ##
 
 
@@ -67,7 +66,7 @@ nGenes=3, cliques=100, kn=5) {
                 ## Doing first calculation
                 if(i == 1 & j == (1:ng)[-g][1]) {
                     resCV <- c(resCV,
-                    sum(class::knn.cv(train=as.data.frame(t(table))[, c(g, j)],
+                    sum(class::knn.cv(train=as.data.frame(t(tab))[, c(g, j)],
                     cl=samp, k=kn) == samp))
                     
                     indexes <- rbind(indexes, c(g, j))
@@ -81,7 +80,7 @@ nGenes=3, cliques=100, kn=5) {
                 
                 if(test == 0) {
                     resCV <- c(resCV,
-                    sum(class::knn.cv(train=as.data.frame(t(table))[, c(g, j)],
+                    sum(class::knn.cv(train=as.data.frame(t(tab))[, c(g, j)],
                     cl=samp, k=kn) == samp))
                     
                     indexes <- rbind(indexes, c(g, j))
@@ -148,6 +147,8 @@ nGenes=3, cliques=100, kn=5) {
     ## Removing samples that wer not used
     idx <- !is.na(colnames(table))
     table <- table[, idx]
+    idxGrp1 <- idxGrp1[idx]
+    idxGrp2 <- idxGrp2[idx]
     
     
     ## Doing the SC method search for classifiers

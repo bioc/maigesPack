@@ -1,17 +1,15 @@
 ## Define methods for image generic function
 ##
 ## Gustavo H. Esteves
-## 27/05/07
+## 05/10/07
 ##
-## Version: 1.1
 ##
 
 
 ## For maigesRaw class (display images of slides also using marray)
 image.maigesRaw <- function(x, ...) {
-    
 
-  
+    
     ## Testting if xvar was specified
     add <- list(...)
     if(length(add) == 0) {
@@ -34,23 +32,30 @@ image.maigesRaw <- function(x, ...) {
                 maA(tmp)[indexes[i],] <- Avalues[i,]
             }
         }
-        maImage(tmp, main=title, subset=indexes)
+        maImage(tmp, main=title)
     }
     else {
         tmp <- as(x, "marrayRaw")
         ## Testing if the object is indexed
         if(dim(x)[1] < x@Layout$Nspots) {
-            Mvalues <- maM(tmp)
-            Avalues <- maA(tmp)
-            maM(tmp) <- matrix(NA, x@Layout$Nspots, dim(x)[2])
-            maA(tmp) <- matrix(NA, x@Layout$Nspots, dim(x)[2])
+            RFvalues <- maRf(tmp)
+            RBvalues <- maRb(tmp)
+            GFvalues <- maGf(tmp)
+            GBvalues <- maGb(tmp)
+            maRf(tmp) <- matrix(NA, x@Layout$Nspots, dim(x)[2])
+            maRb(tmp) <- matrix(NA, x@Layout$Nspots, dim(x)[2])
+            maGf(tmp) <- matrix(NA, x@Layout$Nspots, dim(x)[2])
+            maGb(tmp) <- matrix(NA, x@Layout$Nspots, dim(x)[2])
             indexes <- as.numeric(rownames(x@Glabels))
-            for (i in 1:dim(x)[1]) {
-                maM(tmp)[indexes[i],] <- Mvalues[i,]
-                maA(tmp)[indexes[i],] <- Avalues[i,]
+           for (i in 1:dim(x)[1]) {
+                maRf(tmp)[indexes[i],] <- RFvalues[i,]
+                maRb(tmp)[indexes[i],] <- RBvalues[i,]
+                maGf(tmp)[indexes[i],] <- GFvalues[i,]
+                maGb(tmp)[indexes[i],] <- GBvalues[i,]
             }
         }
-        maImage(tmp, subset=indexes, ...)
+
+        maImage(tmp, ...)
         
     }
 }
@@ -80,7 +85,7 @@ image.maiges <- function(x, ...) {
                 maA(tmp)[indexes[i],] <- Avalues[i,]
             }
         }
-        maImage(tmp, subset=indexes, main=title)
+        maImage(tmp, main=title)
     }
     else {
         tmp <- as(x, "marrayNorm")
@@ -96,7 +101,7 @@ image.maiges <- function(x, ...) {
                 maA(tmp)[indexes[i],] <- Avalues[i,]
             }
         }
-        maImage(tmp, subset=indexes, ...)
+        maImage(tmp, ...)
     }
 }
 

@@ -27,9 +27,8 @@
 ##                          in (0,1), a cuttoff p.value is used.
 ##
 ## Gustavo Esteves
-## 27/05/07
+## 05/10/07
 ##
-## Version: 1.1
 ##
 
 
@@ -232,6 +231,9 @@ nDEgenes=NULL) {
         }
         
         if(type == "HTML") {
+
+            require("annotate")
+            
             if (is.null(filenames)) {
                 
                 filename <- paste(dir, deComp@test, "_", namesDEcomp[i], "_",
