@@ -22,7 +22,6 @@
 ## Adapted from Elier Cristo's functions
 ## 27/05/07
 ##
-## Version: 1.1
 ##
 
 
@@ -92,7 +91,7 @@ gNameID="GeneName", geneGrp=1, path=NULL, nGenes=3, sortBy="cv") {
             idxGood <- sort(resSVD, decreasing=TRUE, index.return=TRUE)$ix
         
         return(list(CV=resCV[idxGood], SVD=resSVD[idxGood],
-                    cliques=indexes[idxGood, ]))
+        cliques=indexes[idxGood, ]))
         
     }
     

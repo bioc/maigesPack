@@ -99,8 +99,8 @@ image(gastro.raw[,1])
 image(gastro.raw[,2], "maA")
 image(gastro.raw[,20], "maRb")
 
-## Example for normalized objects (showing green background for the 5th chip).
-image(gastro.norm[,5], "maGb")
+## Example for normalized objects (showing A values for the 5th chip).
+image(gastro.norm[,5], "maA")
 }
 
 

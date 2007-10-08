@@ -3,7 +3,6 @@
 ## Gustavo H. Esteves
 ## 10/05/07
 ##
-## Version: 1.0
 ##
 
 ## For maigesPreRaw class

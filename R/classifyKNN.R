@@ -22,7 +22,6 @@
 ## Adapted from Elier Cristo's functions
 ## 27/05/07
 ##
-## Version: 1.1
 ##
 
 
@@ -55,7 +54,7 @@ gNameID="GeneName", geneGrp=1, path=NULL, nGenes=3, kn=5) {
                 ## Doing first calculation
                 if(i == 1 & j == (1:ng)[-g][1]) {
                     resCV <- c(resCV,
-                    sum(class::knn.cv(train=as.data.frame(t(table))[, c(g, j)],
+                    sum(class::knn.cv(train=as.data.frame(t(tab))[, c(g, j)],
                     cl=samp, k=kn) == samp))
                     
                     indexes <- rbind(indexes, c(g, j))
@@ -69,7 +68,7 @@ gNameID="GeneName", geneGrp=1, path=NULL, nGenes=3, kn=5) {
                 
                 if(test == 0) {
                     resCV <- c(resCV,
-                    sum(class::knn.cv(train=as.data.frame(t(table))[, c(g, j)],
+                    sum(class::knn.cv(train=as.data.frame(t(tab))[, c(g, j)],
                     cl=samp, k=kn) == samp))
                     
                     indexes <- rbind(indexes, c(g, j))

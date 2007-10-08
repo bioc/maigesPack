@@ -22,7 +22,6 @@
 ## Gustavo H. Esteves
 ## 15/05/07
 ##
-## Version: 1.0
 ##
 
 

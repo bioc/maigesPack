@@ -8,7 +8,6 @@
 ## Gustavo H. Esteves
 ## 27/05/07
 ##
-## Version: 1.1
 ##
 
 

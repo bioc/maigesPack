@@ -6,7 +6,6 @@
 ## Gustavo H. Esteves (addapted from contrasts.fit function from limma package)
 ## 27/05/07
 ##
-## Version: 1.1
 ##
 
 
