@@ -7,7 +7,7 @@
 ##             nCliques  -> number of cliques to be saved
 ##
 ## Gustavo Esteves
-## 27/05/07
+## 21/11/07
 ##
 ##
 
@@ -27,7 +27,7 @@ tableClass <- function(classComp=NULL, file="./class_result", type=c("HTML",
     
     
     ## Verifying if the method used was lda (because of svd values)
-    if(length(grep("lda", classComp@method, fixed=TRUE)) > 0)
+    if(length(grep("lda", classComp@method, ignore.case=TRUE)) > 0)
         tmpDf <- data.frame(CV=classComp@CV, SVD=classComp@SVD,
         Clique=matrix(apply(classComp@cliques, 1, paste, collapse=", "),
         dim(classComp@cliques)[1], 1))
@@ -42,7 +42,7 @@ tableClass <- function(classComp=NULL, file="./class_result", type=c("HTML",
     if(type == "HTML") {
         
         R2HTML::HTML(tmpDf[1:nCliques, ], file=paste(file, ".html", sep=""),
-        innerBorder=1, append=FALSE)
+                     innerBorder=1, append=FALSE)
         
     }
     else
