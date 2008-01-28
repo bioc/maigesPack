@@ -9,7 +9,7 @@
 
 ## For maigesRaw class
 boxplot.maigesRaw <- function(x, ...) {
-    
+
     ## Testting if yvar was specified
     add <- list(...)
     if(length(add) == 0) {
@@ -49,7 +49,7 @@ boxplot.maigesRaw <- function(x, ...) {
         }
         maBoxplot(tmp, ...)
     }
-    
+
 }
 
 
@@ -58,7 +58,7 @@ boxplot.maiges <- function(x, name=NULL, gLabelID=NULL, sLabelID=NULL,
 gSamples=NULL, ...) {
 
     if(is.null(name)) {
-        
+
         ## Testting if yvar was specified
         add <- list(...)
         if(length(add) == 0) {

@@ -92,16 +92,13 @@ data(gastro)
 
 ## Doing image plots (using package marray), default method showing the
 ## W values (for 1st chip), after showing the A values (2nd chip) and
-## red background (20th chip). As we are using as small piece of a large
-## dataset, this command gives some inconvenient warnings...
-\dontrun{
+## red background (20th chip).
 image(gastro.raw[,1])
 image(gastro.raw[,2], "maA")
 image(gastro.raw[,20], "maRb")
 
 ## Example for normalized objects (showing A values for the 5th chip).
 image(gastro.norm[,5], "maA")
-}
 
 
 

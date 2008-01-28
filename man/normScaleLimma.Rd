@@ -52,7 +52,7 @@ boxplot(gastro.norm) ## To see the efect of adjustment
 ## carefull that this method adjust the variance along A values and not
 ## between chips!!
 gastro.norm = normScaleLimma(gastro.raw2, method="vsn")
-boxplot(gastro.norm) ## See the efect
+boxplot(gastro.norm) ## See the effect
 }
 
 \author{

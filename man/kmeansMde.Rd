@@ -84,6 +84,8 @@ kmeansMde(gastro.ttest, sLabelID="Type", adjP="BH", nDEgenes=0.05, centers=2)
 ## K-means cluster with 3 groups adjusting p-values by FDR, and showing all genes
 ## with p-value < 0.05
 kmeansMde(gastro.ttest, sLabelID="Type", adjP="BH", nDEgenes=0.05, centers=3)
+
+dev.off()
 }
 
 \author{

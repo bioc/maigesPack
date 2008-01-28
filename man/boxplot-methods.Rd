@@ -70,13 +70,11 @@ boxplot(gastro.norm) ## maigesNorm class
 boxplot(gastro.summ) ## summarized data (also maigesNorm class)
 
 ## To see the boxplots for W values in individual chips
-## separating into print tips. But, as we used only a fraction (500
-## spots) of the total dataset, this examples doesn't work.
-\dontrun{
-boxplot(gastro.raw[,1])  ## maigesRaw class
-boxplot(gastro.norm[,8]) ## maigesNorm class
-boxplot(gastro.summ[,19]) ## summarized data (also maigesNorm class)
-}
+## separating into print tips.
+boxplot(gastro.raw[,1])  ## maigesRaw class, first chip
+boxplot(gastro.norm[,8]) ## maigesNorm class, 8th chip
+boxplot(gastro.summ[,19]) ## summarized data (also maigesNorm class), 19th chip
+
 
 ## Boxplot for individual genes into ANOVA model fitting
 gastro.ANOVA = designANOVA(gastro.summ, factors="Tissue")
