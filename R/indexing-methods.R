@@ -7,7 +7,7 @@
 
 
 ## For maigesRaw class
-setMethod("[", "maigesPreRaw", structure(function(x, i, j, ..., drop=FALSE) {
+setMethod("[", "maigesPreRaw", function(x, i, j, ..., drop=FALSE) {
     newx <- x
     if (missing(j))
         j <- TRUE
@@ -30,15 +30,11 @@ setMethod("[", "maigesPreRaw", structure(function(x, i, j, ..., drop=FALSE) {
     newx@Date <- date()
 
     return(newx)
-}, ## Close the function definition
-class=structure("MethodDefinition", package="methods"),
-target=structure("maigesPreRaw", .Names="x", class=structure("signature",
-package="methods")), defined=structure("maigesPreRaw", .Names="x",
-class=structure("signature", package="methods")))) ## Close setMethod
+}) ## Close setMethod
 
 
 ## For maigesRaw class
-setMethod("[", "maigesRaw", structure(function(x, i, j, ..., drop=FALSE) {
+setMethod("[", "maigesRaw", function(x, i, j, ..., drop=FALSE) {
     newx <- x
     if (missing(j))
         j <- TRUE
@@ -78,15 +74,11 @@ setMethod("[", "maigesRaw", structure(function(x, i, j, ..., drop=FALSE) {
     newx@Date <- date()
 
     return(newx)
-}, ## Close the function definition
-class=structure("MethodDefinition", package="methods"),
-target=structure("maigesRaw", .Names="x", class=structure("signature",
-package="methods")), defined=structure("maigesRaw", .Names="x",
-class=structure("signature", package="methods")))) ## Close setMethod
+}) ## Close setMethod
 
 
 ## For maiges class
-setMethod("[", "maiges", structure(function(x, i, j, ..., drop=FALSE) {
+setMethod("[", "maiges", function(x, i, j, ..., drop=FALSE) {
     newx <- x
     if (missing(j))
         j <- TRUE
@@ -122,15 +114,11 @@ setMethod("[", "maiges", structure(function(x, i, j, ..., drop=FALSE) {
     newx@Date <- date()
 
     return(newx)
-}, ## Close function
-class=structure("MethodDefinition", package="methods"),
-target=structure("maiges", .Names="x", class=structure("signature",
-package="methods")), defined=structure("maiges", .Names="x",
-class=structure("signature", package="methods")))) ## close setMethod
+}) ## close setMethod
 
 
 ## For maigesANOVA class
-setMethod("[", "maigesANOVA", structure(function(x, i, j, ..., drop=FALSE) {
+setMethod("[", "maigesANOVA", function(x, i, j, ..., drop=FALSE) {
     newx <- x
     if (missing(j))
         j <- TRUE
@@ -166,8 +154,4 @@ setMethod("[", "maigesANOVA", structure(function(x, i, j, ..., drop=FALSE) {
     newx@Date <- date()
 
     return(newx)
-}, ## Close function
-class=structure("MethodDefinition", package="methods"),
-target=structure("maiges", .Names="x", class=structure("signature",
-package="methods")), defined=structure("maiges", .Names="x",
-class=structure("signature", package="methods")))) ## close setMethod
+}) ## close setMethod

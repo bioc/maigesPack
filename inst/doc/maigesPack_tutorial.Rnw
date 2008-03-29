@@ -22,7 +22,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Beggining of the document
+% Beginning of the document
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -88,7 +88,7 @@ is included as part of this package, type {\tt data(gastro)}
 to load some objects into your R session. Type {\tt ?gastro} to get more
 information about this dataset.
 
-The original data have 4800 spots (aproximately 4400 unique genes) and 172 chips
+The original data have 4800 spots (approximately 4400 unique genes) and 172 chips
 with dye swap, what resulted in a dataset of 86 samples. The subdataset included
 in this package has 500 spots (representing 486 unique genes) and 40 chips (from
 20 observations) between the total 172.
