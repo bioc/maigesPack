@@ -1,5 +1,5 @@
 Package: maigesPack
-Version: 1.5.1
+Version: 1.6.0
 Title: Functions to handle cDNA microarray data, including several methods of
 	data analysis
 Author: Gustavo H. Esteves <gesteves@gmail.com>, with contributions from
