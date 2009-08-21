@@ -26,7 +26,7 @@
     \item{\code{maxB}:}{numerical square matrix that store the maximum
       (in absolute value) of the correlation values calculated by
       permutation values, as described by Butte et al. (2000).}
-    \item{\code{types}:}{character vector giving the name of sample
+    \item{\code{type}:}{character vector giving the name of sample
       type tested.}
     \item{\code{Slabel}:}{string with the sample label used to define
       the sample types tested.}

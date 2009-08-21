@@ -25,7 +25,7 @@
     \item{\code{Sdye}:}{character vector with length equal the length of
       data files (chips), specifying the channel ('ch1' or 'ch2') used
       to label each test sample in each chip.}
-    \item{\code{Rf}:}{numeric matrix containing the reference samples
+    \item{\code{Rb}:}{numeric matrix containing the reference samples
       spots intensity values, spots corresponding to rows and data
       tables (or chips) corresponding to columns.}
     \item{\code{Rf}:}{numeric matrix containing the reference samples
