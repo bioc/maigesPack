@@ -1,5 +1,5 @@
 Package: maigesPack
-Version: 1.9.1
+Version: 1.9.2
 Title: Functions to handle cDNA microarray data, including several methods of
 	data analysis
 Author: Gustavo H. Esteves <gesteves@gmail.com>, with contributions from
@@ -12,7 +12,7 @@ Suggests: amap, annotate, class, e1071, MASS, multtest, OLIN, R2HTML, rgl, som
 Description: This package uses functions of various other packages together with
 	other functions  in a coordinated way to handle and analyse cDNA
 	microarray data
-License: GPL version 2 or newer
+License: GPL (>= 2)
 LazyLoad: yes
 biocViews: Microarray, TwoChannel, Preprocessing, Bioinformatics,
 	DifferentialExpression, Clustering, Classification, GraphsAndNetworks
