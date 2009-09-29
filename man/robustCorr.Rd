@@ -37,7 +37,7 @@ robustCorr(x, y=NULL)
   similar to the leave-one-out used for cross-validation of
   classification results. The algorithm removes one point at a time and
   calculates a usual Pearson correlation value. Them, with a vector
-  \code{\bold{r}} of correlation values that has the same length as the
+  \code{r} of correlation values that has the same length as the
   columns of \code{x} (or vectors \code{x} and \code{y}), the algorithm
   decides by the \code{min}(\bold{r}) or \code{max}(\bold{r}), according
   with that one that is more distant from the median value.
