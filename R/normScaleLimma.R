@@ -52,17 +52,26 @@ normScaleLimma <- function(obj=NULL, ...) {
     idxMult <- tolower(getLabels(obj, "Ref")) == "red"
     
     
-    ## Catching the method of scale normalization
+    ## Catching the method of scale normalization and
+    ## doing normalization by limma's method
     add <- list(...)
-    if(is.null(add$method))
+    if(is.null(add$method)) {
         type <- "Aquantile"
-    else
+        tmp <- normalizeBetweenArrays(toNorm, ...)
+    }
+    else if(add$method == "vsn") {
         type <- add$method
+        tmp <- normalizeVSN(toNorm)
+    }
+    else {
+        type <- add$method
+        tmp <- normalizeBetweenArrays(toNorm, ...)
+    }
     
     
     
     ## Normalization by the limma method
-    tmp <- normalizeBetweenArrays(toNorm, ...)
+    ##tmp <- normalizeBetweenArrays(toNorm, ...)
     tmp1 <- as.matrix(tmp$M)
     if (sum(idxMult) > 0)
         tmp1[, idxMult] <- (-1)*tmp1[, idxMult]
