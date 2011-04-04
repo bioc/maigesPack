@@ -35,7 +35,7 @@
 \maketitle
 
 \begin{center}
-Departamento de Matem\'{a}tica e Estat\'{\i}stica - Centro de Ciências e
+Departamento de Matem\'{a}tica e Estat\'{\i}stica - Centro de Ciencias e
 Tecnologia - Universidade Estadual da Para\'{\i}ba,
 Campina Grande - PB, Brasil, \url{http://www.maiges.org/en/software/}\\
 \end{center}
