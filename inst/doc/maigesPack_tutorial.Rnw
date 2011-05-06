@@ -447,11 +447,6 @@ somMde(gastro.ttest, sLabelID="Type", adjP="BH", nDEgenes=20,
   DE genes.}
 \end{figure}
 
-% code 21
-<<eval=TRUE, echo=FALSE, results=hide>>=
-dev.off()
-@
-
 Similarly, it is possible to do cluster analysis directly for objects
 of class {\tt maiges}, using the functions {\tt hierM}, {\tt somM} and {\tt
   kmeansM}, but without selecting differentially expressed genes.
