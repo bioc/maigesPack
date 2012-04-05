@@ -142,10 +142,8 @@ plot(gastro.ttest) ## Volcano plot
 gastro.class = classifyLDA(gastro.summ, sLabelID="Type",
   gNameID="GeneName", nGenes=3, geneGrp=6)
 
-\dontrun{
 plot(gastro.class) ## plot the 1st classifier
 plot(gastro.class, idx=7) ## plot the 7th classifier
-}
 
 
 ## Example for object of class maigesActNet
