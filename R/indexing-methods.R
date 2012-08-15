@@ -16,10 +16,10 @@ setMethod("[", "maigesPreRaw", function(x, i, j, ..., drop=FALSE) {
     if (length(x@Data) != 0)
         for (k in names(x@Data))
             newx@Data[[k]] <- x@Data[[k]][i, j, drop=FALSE]
-    gastro@Layout <- gastro@Layout
-    gastro@Glabels <- gastro@Glabels
-    gastro@Slabels <- gastro@Slabels
-    gastro@Notes <- gastro@Notes
+    newx@Layout <- x@Layout
+    newx@Glabels <- x@Glabels
+    newx@Slabels <- x@Slabels
+    newx@Notes <- x@Notes
 
     if (length(x@BadSpots) != 0)
         newx@BadSpots <- x@BadSpots[i]

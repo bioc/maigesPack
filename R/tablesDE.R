@@ -27,7 +27,7 @@
 ##                          in (0,1), a cuttoff p.value is used.
 ##
 ## Gustavo Esteves
-## 05/10/07
+## 26/06/12
 ##
 ##
 
@@ -36,8 +36,16 @@ tablesDE <- function(deComp=NULL, dir="./", filenames=NULL, dataID="Someone's",
 type=c("HTML","CSV")[1], geneID="GeneName", hsID="ClusterId", gbID="GeneId",
 annotID="Annot", genes=NULL, logFold=TRUE, adjP="none", sort="p.value",
 nDEgenes=NULL) {
-    
-    
+  
+  
+  ## Defining a new repositoty to NCBI gene name
+  repofun <- function(ids){
+    out <- paste("http://www.ncbi.nlm.nih.gov/gene?term=", ids, sep = "")
+    out
+  }
+  require(annotate)
+  setRepository("gene", repofun)
+  
     
     ## Doing some initial tests...
     if(is.null(deComp))
@@ -207,13 +215,13 @@ nDEgenes=NULL) {
     
     nn <- length(head)
     if(!is.null(gbID) & !is.null(hsID))
-        repository=list("affy","gb","ug")
+        repository=list("gene","gb","ug")
     else if(!is.null(gbID))
-        repository=list("affy","gb")
+        repository=list("gene","gb")
     else if(!is.null(hsID))
-        repository=list("affy","ug")
+        repository=list("gene","ug")
     else
-        repository=list("affy")
+        repository=list("gene")
     
     for(i in 1:nComp) {
         
