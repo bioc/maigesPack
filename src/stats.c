@@ -2,7 +2,7 @@
    Additional functions to do the others calculation.
    
    Gustavo H. Esteves
-   22/05/07
+   01/10/14
 */
 
 
@@ -77,7 +77,7 @@ double stats_median_from_sorted_data(double *v, int n) {
     
     i = n/2;
     
-    return (v[i] + v[--i])/2; 
+    return (v[i] + v[i-1])/2; 
     
 }
 

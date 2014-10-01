@@ -62,7 +62,7 @@ bootstrapT <- function(x, k=20000, obs1, obs2, ...) {
     pBootT <- .C("bootT", as.double(as.vector(t(x))), as.integer(k),
     as.integer(obs1), as.integer(obs2), as.integer(nRows),
     as.integer(length(obs1)), as.integer(length(obs2)),
-    as.integer(vEq), as.double(rep(1, nRows)), DUP=FALSE,
+    as.integer(vEq), as.double(rep(1, nRows)), #DUP=FALSE,
     PACKAGE="maigesPack")[[9]]
     
     

@@ -1,7 +1,7 @@
 ## Define Classes for maigesPack package
 ##
 ## Gustavo H. Esteves
-## 17/05/07
+## 01/10/14
 ##
 ##
 
@@ -97,4 +97,4 @@ Date="character", V.info="list"))
 ## Guaranting the loading of methods package to use classes and methods defined
 ## in it
 ##
-.onLoad <- function(lib, pkg) require("methods")
+#.onLoad <- function(lib, pkg) require("methods")

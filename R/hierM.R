@@ -128,7 +128,7 @@ path=NULL, ...) {
         if(doHeat)
             heatmap(tmpMatrix, distfun=function(c) amap::Dist(c,
             method=distance), hclustfun=function(d) hclust(d, method=method),
-            Colv=NA, zlim=zLim, col=maigesPack:::greenRed(), scale="none", ...)
+            Colv=NA, zlim=zLim, col=greenRed(), scale="none", ...)
         
         else
             plot(hclust(amap::Dist(tmpMatrix, method=distance), method=method))
@@ -138,7 +138,7 @@ path=NULL, ...) {
         if(doHeat)
             heatmap(tmpMatrix, distfun=function(c) amap::Dist(c,
             method=distance), hclustfun=function(d) hclust(d, method=method),
-            Rowv=NA, zlim=zLim, col=maigesPack:::greenRed(), scale="none", ...)
+            Rowv=NA, zlim=zLim, col=greenRed(), scale="none", ...)
         
         else
             plot(hclust(amap::Dist(t(tmpMatrix), method=distance),
@@ -151,7 +151,7 @@ path=NULL, ...) {
         else
             heatmap(tmpMatrix, distfun=function(c) amap::Dist(c,
             method=distance), hclustfun=function(d) hclust(d, method=method),
-            zlim=zLim, col=maigesPack:::greenRed(), scale="none", ...)
+            zlim=zLim, col=greenRed(), scale="none", ...)
         
     }
 }

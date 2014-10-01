@@ -457,7 +457,7 @@ plot.maigesActMod <- function(x, type=c("S", "C")[2], keepEmpty=FALSE, ...) {
         idx1 <- order(rownames(table))
         idx2 <- order.dendrogram(as.dendrogram(hclust(dist(t(table)))))
 
-        heatmap(table[idx1, idx2], scale="none", col=maigesPack:::greenRed(),
+        heatmap(table[idx1, idx2], scale="none", col=greenRed(),
         zlim=limite, Rowv=NA, Colv=NA, ...)
 
     }
@@ -475,7 +475,7 @@ plot.maigesActMod <- function(x, type=c("S", "C")[2], keepEmpty=FALSE, ...) {
         idx1 <- order(rownames(table))
         idx2 <- order.dendrogram(as.dendrogram(hclust(dist(t(table)))))
 
-        heatmap(table[idx1, idx2], scale="none", col=maigesPack:::greenRed(),
+        heatmap(table[idx1, idx2], scale="none", col=greenRed(),
         zlim=limite, Rowv=NA, Colv=NA, ...)
 
     }
@@ -496,7 +496,7 @@ plot.maigesActNet <- function(x, type=c("score","p-value")[1], ...) {
         limite <- c(0, limite)
         idx <- order.dendrogram(as.dendrogram(hclust(dist(t(x@scores)))))
 
-        heatmap(x@scores[, idx], scale="none", col=maigesPack:::blackBlue(),
+        heatmap(x@scores[, idx], scale="none", col=blackBlue(),
         zlim=limite, Rowv=NA, Colv=NA, ...)
 
     }
@@ -508,7 +508,7 @@ plot.maigesActNet <- function(x, type=c("score","p-value")[1], ...) {
         idx <- order.dendrogram(as.dendrogram(hclust(dist(t(x@Pvalues)))))
         
         heatmap(-log10(x@Pvalues)[, idx], scale="none",
-        col=maigesPack:::blackBlue(), zlim=limite, Rowv=NA, Colv=NA, ...)
+        col=blackBlue(), zlim=limite, Rowv=NA, Colv=NA, ...)
 
     }
 }
