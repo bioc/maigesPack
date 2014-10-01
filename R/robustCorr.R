@@ -29,7 +29,8 @@ robustCorr <- function(x, y=NULL) {
         ## Doing the cor calculations from C compiled code
         tmp <- .C("robustCorr", as.double(as.vector(t(x))), as.integer(ns[1]),
         as.integer(ns[2]), as.double(rep(1, (ns[1])^2)), as.integer(rep(0,
-        (ns[1])^2)), DUP=FALSE, PACKAGE="maigesPack")
+        (ns[1])^2)), #DUP=FALSE, 
+        PACKAGE="maigesPack")
         
         
         ## Defining the result matrix
@@ -59,7 +60,8 @@ robustCorr <- function(x, y=NULL) {
         
         tmp <- .C("robustCorr", as.double(as.vector(t(calc))),
         as.integer(ns[1]), as.integer(ns[2]), as.double(rep(1, (ns[1])^2)),
-        as.integer(rep(0, (ns[1])^2)), DUP=FALSE, PACKAGE="maigesPack")
+        as.integer(rep(0, (ns[1])^2)), #DUP=FALSE, 
+        PACKAGE="maigesPack")
         
         
         ## Defining the result

@@ -127,7 +127,7 @@ image.maigesRelNetM <- function(x=NULL, names=NULL, ...) {
     par(mar=c(5, 9, 9, 1))
 
     image(1:nrow(x@Corr1), 1:ncol(x@Corr1), t(x@Corr1[nrow(x@Corr1):1,]),
-    col=maigesPack:::greenRed(), axes=FALSE, xlab=names[1], ylab="",
+    col=greenRed(), axes=FALSE, xlab=names[1], ylab="",
     zlim=limite, ...)
 
     axis(2, 1:nrow(x@Corr1), las=2, labels=rev(rownames(x@Corr1)),
@@ -144,7 +144,7 @@ image.maigesRelNetM <- function(x=NULL, names=NULL, ...) {
     par(mar=c(5, 9, 9, 1))
 
     image(1:nrow(x@Corr2), 1:ncol(x@Corr2), t(x@Corr2[nrow(x@Corr2):1,]),
-    col=maigesPack:::greenRed(), axes=FALSE, xlab=names[2], ylab="",
+    col=greenRed(), axes=FALSE, xlab=names[2], ylab="",
     zlim=limite, ...)
 
     axis(2, 1:nrow(x@Corr2), las=2, labels=rev(rownames(x@Corr2)),
@@ -161,7 +161,7 @@ image.maigesRelNetM <- function(x=NULL, names=NULL, ...) {
     par(mar = c(5, 9, 9, 1))
 
     image(1:nrow(x@DifP), 1:ncol(x@DifP), t(-log(x@DifP)[nrow(x@DifP):1,]),
-    col=maigesPack:::blackBlue(), axes=FALSE, xlab=names[3],
+    col=blackBlue(), axes=FALSE, xlab=names[3],
     ylab="", zlim=limite, ...)
 
     axis(2, 1:nrow(x@DifP), las=2, labels=rev(rownames(x@DifP)),
@@ -187,7 +187,7 @@ image.maigesRelNetB <- function(x=NULL, name=NULL, ...) {
     par(mar=c(5, 9, 9, 1))
 
     image(1:nrow(x@Corr), 1:ncol(x@Corr), t(x@Corr[nrow(x@Corr):1,]),
-    col=maigesPack:::greenRed(), axes=FALSE, xlab=name, ylab="", zlim=limite,
+    col=greenRed(), axes=FALSE, xlab=name, ylab="", zlim=limite,
     ...)
 
     axis(2, 1:nrow(x@Corr), las=2, labels=rev(rownames(x@Corr)),
@@ -223,7 +223,7 @@ keepEmpty=FALSE, ...) {
         idx1 <- order(rownames(table))
         idx2 <- order.dendrogram(as.dendrogram(hclust(dist(t(table)))))
 
-        heatmap(table[idx1, idx2], scale="none", col=maigesPack:::greenRed(),
+        heatmap(table[idx1, idx2], scale="none", col=greenRed(),
         zlim=limite, Rowv=NA, Colv=NA, ...)
     }
     else if(type == "C") {
@@ -241,7 +241,7 @@ keepEmpty=FALSE, ...) {
         idx1 <- order(rownames(table))
         idx2 <- order.dendrogram(as.dendrogram(hclust(dist(t(table)))))
 
-        heatmap(table[idx1, idx2], scale="none", col=maigesPack:::greenRed(),
+        heatmap(table[idx1, idx2], scale="none", col=greenRed(),
         zlim=limite, Rowv=NA, Colv=NA, ...)
     }
 }
@@ -262,7 +262,7 @@ image.maigesActNet <- function(x, type=c("score","p-value")[1], ...) {
         limite <- c(0, limite)
         idx <- order.dendrogram(as.dendrogram(hclust(dist(t(x@scores)))))
 
-        heatmap(x@scores[, idx], scale="none", col=maigesPack:::blackBlue(),
+        heatmap(x@scores[, idx], scale="none", col=blackBlue(),
         zlim=limite, Rowv=NA, Colv=NA, ...)
     }
     else {
@@ -273,6 +273,6 @@ image.maigesActNet <- function(x, type=c("score","p-value")[1], ...) {
         idx <- order.dendrogram(as.dendrogram(hclust(dist(t(x@Pvalues)))))
         
         heatmap(-log10(x@Pvalues)[, idx], scale="none",
-        col=maigesPack:::blackBlue(), zlim=limite, Rowv=NA, Colv=NA, ...)
+        col=blackBlue(), zlim=limite, Rowv=NA, Colv=NA, ...)
     }
 }

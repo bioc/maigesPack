@@ -482,19 +482,20 @@ is {\tt boxplot}. This type of plot may help in identify the tissues
 where some gene presented alteration. For example the gene FUBP1, presents 
 significantly alteration in the F test done above. Using the command
 below it is possible to see in what tissue this gene is altered. 
-The result is illustrated in the Figure \ref{boxplot}. The method {\tt
-  boxplot} also works with objects of class {\tt maiges}.
+%The result is illustrated in the Figure \ref{boxplot}. The method {\tt
+%  boxplot} also works with objects of class {\tt maiges}.
 % code 26
-<<Bplot,fig=TRUE,prefix=FALSE,echo=TRUE,include=FALSE,eps=FALSE>>=
-boxplot(gastro.ANOVAfit, name="KLK13", gLabelID="GeneName", 
+%<<Bplot,fig=FALSE,prefix=FALSE,echo=TRUE,include=FALSE,eps=FALSE>>=
+<<eval=FALSE, echo=TRUE>>=
+boxplot(gastro.ANOVAfit, name="FUBP1", gLabelID="GeneName", 
 sLabelID="Tissue")
 @
-\begin{figure}[ht!]
-  \centering
-  \includegraphics{Bplot}
-  \caption{\label{boxplot} Boxplot for the gene FUBP1 separating by
-  tissues.}
-\end{figure}
+% \begin{figure}[ht!]
+%   \centering
+%   \includegraphics{Bplot}
+%   \caption{\label{boxplot} Boxplot for the gene FUBP1 separating by
+%   tissues.}
+% \end{figure}
 
 The object resulted from this fitting are also of class {\tt maigesDE}
 (or {\tt maigesDEcluster}). So, the commands for plot, to save tables 

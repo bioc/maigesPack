@@ -1,6 +1,6 @@
 useDynLib(maigesPack)
 
-import(graphics, stats, graph)
+import(graphics, stats, graph, convert, limma, marray, methods)
 
 exportClasses(maigesPreRaw, maigesRaw, maiges, maigesANOVA, maigesDE,
               maigesDEcluster, maigesClass, maigesRelNetM, maigesRelNetB,

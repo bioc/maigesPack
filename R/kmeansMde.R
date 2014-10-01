@@ -100,7 +100,7 @@ gLabelID="GeneName", idxTest=1, adjP="none", nDEgenes=0.05, ...) {
         
         heatmapsM(tmpMatrix, distfun=function(c) amap::Dist(c, method=distance),
         hclustfun=function(d) hclust(d, method=method), groups, sampleT=sampleT,
-        doHier=doHier, col=maigesPack:::greenRed())
+        doHier=doHier, col=greenRed())
         
     }
     else {
@@ -109,7 +109,7 @@ gLabelID="GeneName", idxTest=1, adjP="none", nDEgenes=0.05, ...) {
         
         heatmapsM(tmpMatrix, distfun=function(c) amap::Dist(c, method=distance),
         hclustfun=function(d) hclust(d, method=method), groups, sampleT=sampleT,
-        doHier=doHier, col=maigesPack:::greenRed())
+        doHier=doHier, col=greenRed())
         
     }
     

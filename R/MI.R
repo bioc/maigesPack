@@ -32,7 +32,8 @@ MI <- function(x, y=NULL, k=1) {
         ## Doing the cor calculations from C compiled code
         tmp <- .C("Minfo", as.double(as.vector(t(x))), as.integer(ns[1]),
         as.integer(ns[2]), as.integer(k), as.double(rep(0, (ns[1])^2)),
-        DUP=FALSE, PACKAGE="maigesPack")
+        PACKAGE="maigesPack")
+        #DUP=FALSE, PACKAGE="maigesPack")
         
         ## Defining the result matrix
         tmp <- matrix(tmp[[5]], ns[1], ns[1], TRUE)
@@ -60,7 +61,8 @@ MI <- function(x, y=NULL, k=1) {
         ns <- dim(calc)
         tmp <- .C("Minfo", as.double(as.vector(t(calc))), as.integer(ns[1]),
         as.integer(ns[2]), as.integer(k), as.double(rep(0, (ns[1])^2)),
-        DUP=FALSE, PACKAGE="maigesPack")
+        PACKAGE="maigesPack")
+        #DUP=FALSE, PACKAGE="maigesPack")
         
         ## Defining the result
         tmp <- matrix(tmp[[5]], ns[1], ns[1], TRUE)
