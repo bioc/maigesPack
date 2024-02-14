@@ -1,5 +1,5 @@
 Package: maigesPack
-Version: 1.67.0
+Version: 1.67.1
 Title: Functions to handle cDNA microarray data, including several
         methods of data analysis
 Author: Gustavo H. Esteves <gesteves@gmail.com>, with contributions
@@ -31,8 +31,9 @@ Collate: AllClasses.R AllGenerics.R print-methods.R summary-methods.R
         kmeansM.R loadData.R MI.R normLoc.R normOLIN.R normRepLoess.R
         normScaleLimma.R normScaleMarray.R plotGenePair.R relNet2TGF.R
         relNetworkB.R relNetworkM.R robustCorr.R selSpots.R somMde.R
-        somM.R summarizeReplicates.R tableClass.R tablesDE.R
+        somM.R summarizeReplicates.R tableClass.R tablesDE.R zzz.R
 URL: http://www.maiges.org/en/software/
 biocViews: Microarray, TwoChannel, Preprocessing, ThirdPartyClient,
         DifferentialExpression, Clustering, Classification,
         GraphAndNetwork
+PackageStatus: Deprecated
